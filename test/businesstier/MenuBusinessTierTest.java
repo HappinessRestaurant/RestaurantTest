@@ -21,24 +21,7 @@ import static org.junit.Assert.*;
  */
 public class MenuBusinessTierTest {
     
-    public MenuBusinessTierTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
+   
 
     /**
      * Test of createMenu method, of class MenuBusinessTier.
@@ -53,64 +36,8 @@ public class MenuBusinessTierTest {
         assertEquals(expResult, result);
        
     }
-
-    /**
-     * Test of retrieveFood method, of class MenuBusinessTier.
-     */
-    @Test
-    public void testRetrieveFood() throws Exception {
-        System.out.println("retrieveFood");
-        MenuBusinessTier instance = new MenuBusinessTier();
-        ArrayList expResult = instance.retrieveFood();
-        ArrayList result = instance.retrieveFood();
-        assertEquals(expResult, result);
-        
-    }
-
-    /**
-     * Test of retrieveAllFoodId method, of class MenuBusinessTier.
-     */
-    @Test
-    public void testRetrieveAllFoodId() throws Exception {
-        System.out.println("retrieveAllFoodId");
-        MenuBusinessTier instance = new MenuBusinessTier();
-        ArrayList expResult =instance.retrieveAllFoodId();
-        ArrayList result = instance.retrieveAllFoodId();
-        assertEquals(expResult, result);
-        
-    }
-
-    /**
-     * Test of retrieveAllMenu method, of class MenuBusinessTier.
-     */
-    @Test
-    public void testRetrieveAllMenu() throws Exception {
-        System.out.println("retrieveAllMenu");
-        MenuBusinessTier instance = new MenuBusinessTier();
-        ArrayList<Menu> expResult = instance.retrieveAllMenu();
-        ArrayList<Menu> result = instance.retrieveAllMenu();
-        assertEquals(expResult, result);
-       
-    }
-
-    /**
-     * Test of retrieveAMenu method, of class MenuBusinessTier.
-     */
-    @Test
-    public void testRetrieveAMenu() throws Exception {
-        System.out.println("retrieveAMenu");
-        String food_id = "F10001";
-        MenuBusinessTier instance = new MenuBusinessTier();
-        String expResult = instance.retrieveAMenu(food_id);
-        String result = instance.retrieveAMenu(food_id);
-        assertEquals(expResult, result);
-        
-    }
-
-    /**
-     * Test of retrieveId method, of class MenuBusinessTier.
-     */
-    @Test
+    
+ @Test
     public void testRetrieveId() throws Exception {
         System.out.println("retrieveId");
         String id = "F10001";
