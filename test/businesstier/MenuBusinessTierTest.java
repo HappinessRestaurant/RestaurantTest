@@ -8,6 +8,7 @@ package businesstier;
 import domain.Menu;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+import jdbc.MenuJDBC;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -41,6 +42,7 @@ public class MenuBusinessTierTest {
     public void testRetrieveId() throws Exception {
         System.out.println("retrieveId");
         String id = "F10001";
+        MenuJDBC jdbc=new MenuJDBC();
         MenuBusinessTier instance = new MenuBusinessTier();
         ArrayList expResult = instance.retrieveId(id);
         ArrayList result = instance.retrieveId(id);
