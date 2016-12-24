@@ -7,6 +7,7 @@ package businesstier;
 
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+import jdbc.PaymentJDBC;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -135,6 +136,7 @@ public class PaymentBusinessTierTest {
     public void testRetrieveReceipt() throws Exception {
         System.out.println("retrieveReceipt");
         String payment_id = "";
+        PaymentJDBC jdbc = new PaymentJDBC();
         PaymentBusinessTier instance = new PaymentBusinessTier();
         ArrayList expResult = null;
         ArrayList result = instance.retrieveReceipt(payment_id);
@@ -155,4 +157,5 @@ public class PaymentBusinessTierTest {
         
     }
     
+
 }
