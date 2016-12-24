@@ -47,13 +47,12 @@ public class MenuBusinessTierTest {
     @Test
     public void testCreateMenu() throws Exception {
         System.out.println("createMenu");
-        Menu m = null;
+        Menu m = new Menu("F10004","Yong Tau Fu",4.5);
         MenuBusinessTier instance = new MenuBusinessTier();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.createMenu(m);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -63,11 +62,11 @@ public class MenuBusinessTierTest {
     public void testRetrieveFood() throws Exception {
         System.out.println("retrieveFood");
         MenuBusinessTier instance = new MenuBusinessTier();
-        ArrayList expResult = null;
+        MenuJDBC jdbc=new MenuJDBC();
+        ArrayList expResult = jdbc.retrieveFood();
         ArrayList result = instance.retrieveFood();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -77,11 +76,11 @@ public class MenuBusinessTierTest {
     public void testRetrieveAllFoodId() throws Exception {
         System.out.println("retrieveAllFoodId");
         MenuBusinessTier instance = new MenuBusinessTier();
-        ArrayList expResult = null;
+        MenuJDBC jdbc=new MenuJDBC();
+        ArrayList expResult = jdbc.retrieveAllFoodId();
         ArrayList result = instance.retrieveAllFoodId();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -90,12 +89,12 @@ public class MenuBusinessTierTest {
     @Test
     public void testRetrieveAllMenu() throws Exception {
         System.out.println("retrieveAllMenu");
+        MenuJDBC jdbc=new MenuJDBC();
         MenuBusinessTier instance = new MenuBusinessTier();
-        ArrayList<Menu> expResult = null;
+        ArrayList<Menu> expResult = jdbc.retrieveAllMenu();
         ArrayList<Menu> result = instance.retrieveAllMenu();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -104,9 +103,10 @@ public class MenuBusinessTierTest {
     @Test
     public void testRetrieveAMenu() throws Exception {
         System.out.println("retrieveAMenu");
-        String food_id = "";
+        MenuJDBC jdbc=new MenuJDBC();
+        String food_id = "F10001";
         MenuBusinessTier instance = new MenuBusinessTier();
-        String expResult = "";
+        String expResult = jdbc.retrieveAMenu(food_id);
         String result = instance.retrieveAMenu(food_id);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -120,12 +120,12 @@ public class MenuBusinessTierTest {
     public void testRetrieveId() throws Exception {
         System.out.println("retrieveId");
         String id = "";
+        MenuJDBC jdbc=new MenuJDBC();
         MenuBusinessTier instance = new MenuBusinessTier();
         ArrayList expResult = null;
         ArrayList result = instance.retrieveId(id);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -134,13 +134,12 @@ public class MenuBusinessTierTest {
     @Test
     public void testUpdateMenu() throws Exception {
         System.out.println("updateMenu");
-        Menu m = null;
+        Menu m = new Menu("F10001","Mangga",5);
         MenuBusinessTier instance = new MenuBusinessTier();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.updateMenu(m);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -149,13 +148,12 @@ public class MenuBusinessTierTest {
     @Test
     public void testDeleteMenu() throws Exception {
         System.out.println("deleteMenu");
-        String fname = "";
+        String fname = "Yong Tau Fu";
         MenuBusinessTier instance = new MenuBusinessTier();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.deleteMenu(fname);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -164,11 +162,10 @@ public class MenuBusinessTierTest {
     @Test
     public void testViewMenu() throws Exception {
         System.out.println("viewMenu");
-        DefaultTableModel model = null;
+        DefaultTableModel model = new DefaultTableModel();
         MenuBusinessTier instance = new MenuBusinessTier();
         instance.viewMenu(model);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }
