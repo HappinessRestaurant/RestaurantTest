@@ -93,9 +93,10 @@ public class PaymentBusinessTierTest {
     @Test
     public void testRetrievePayment() throws Exception {
         System.out.println("retrievePayment");
+        PaymentJDBC jdbc = new PaymentJDBC();
         String payment_id = "P1000";
         PaymentBusinessTier instance = new PaymentBusinessTier();
-        String expResult = "O1001"+"O1002";
+        String expResult = jdbc.retrievePayment(payment_id);
         String result = instance.retrievePayment(payment_id);
         assertEquals(expResult, result);
         
