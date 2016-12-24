@@ -107,8 +107,9 @@ public class PaymentBusinessTierTest {
     @Test
     public void testRetrievePaymentId() throws Exception {
         System.out.println("retrievePaymentId");
+        PaymentJDBC jdbc = new PaymentJDBC();
         PaymentBusinessTier instance = new PaymentBusinessTier();
-        ArrayList expResult = null;
+        ArrayList expResult = jdbc.retrievePaymentId();
         ArrayList result = instance.retrievePaymentId();
         assertEquals(expResult, result);
         
@@ -120,10 +121,11 @@ public class PaymentBusinessTierTest {
     @Test
     public void testGenerateReceipt() throws Exception {
         System.out.println("generateReceipt");
+        PaymentJDBC jdbc = new PaymentJDBC();
         String payment_id = "";
         String member = "";
         PaymentBusinessTier instance = new PaymentBusinessTier();
-        String expResult = "";
+        String expResult = jdbc.generateReceipt(payment_id, member);
         String result = instance.generateReceipt(payment_id, member);
         assertEquals(expResult, result);
       
@@ -138,7 +140,7 @@ public class PaymentBusinessTierTest {
         String payment_id = "";
         PaymentJDBC jdbc = new PaymentJDBC();
         PaymentBusinessTier instance = new PaymentBusinessTier();
-        ArrayList expResult = null;
+        ArrayList expResult =null;
         ArrayList result = instance.retrieveReceipt(payment_id);
         assertEquals(expResult, result);
         
