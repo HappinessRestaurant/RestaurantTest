@@ -67,7 +67,7 @@ public class PaymentBusinessTierTest {
     public void testGetPaymentId() throws Exception {
         System.out.println("getPaymentId");
         PaymentBusinessTier instance = new PaymentBusinessTier();
-        String expResult = "P1000"+"P1001"+"P1002"+"P1003"+"P104"+"P1005"+"P1006";
+        String expResult = "P1006";
         String result = instance.getPaymentId();
         assertEquals(expResult, result);
       
@@ -81,7 +81,7 @@ public class PaymentBusinessTierTest {
         System.out.println("calculation");
         String order_no = "O1006";
         PaymentBusinessTier instance = new PaymentBusinessTier();
-        double expResult = 5;
+        double expResult = 2.5;
         double result = instance.calculation(order_no);
         assertEquals(expResult, result, 0.0);
         
@@ -140,7 +140,7 @@ public class PaymentBusinessTierTest {
         String payment_id = "";
         PaymentJDBC jdbc = new PaymentJDBC();
         PaymentBusinessTier instance = new PaymentBusinessTier();
-        ArrayList expResult =null;
+        ArrayList expResult =jdbc.retrieveReceipt(payment_id);
         ArrayList result = instance.retrieveReceipt(payment_id);
         assertEquals(expResult, result);
         
