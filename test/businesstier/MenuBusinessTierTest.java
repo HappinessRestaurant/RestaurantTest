@@ -109,8 +109,7 @@ public class MenuBusinessTierTest {
         String expResult = jdbc.retrieveAMenu(food_id);
         String result = instance.retrieveAMenu(food_id);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -119,10 +118,10 @@ public class MenuBusinessTierTest {
     @Test
     public void testRetrieveId() throws Exception {
         System.out.println("retrieveId");
-        String id = "";
+        String id = "F10001";
         MenuJDBC jdbc=new MenuJDBC();
         MenuBusinessTier instance = new MenuBusinessTier();
-        ArrayList expResult = null;
+        ArrayList expResult = jdbc.retrieveId(id);
         ArrayList result = instance.retrieveId(id);
         assertEquals(expResult, result);
         
