@@ -13,6 +13,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import jdbc.OrderJDBC;
 
 /**
  *
@@ -45,14 +46,13 @@ public class OrderBusinessTierTest {
     @Test
     public void testCreateOrder() throws Exception {
         System.out.println("createOrder");
-        String order_no = "";
-        String seat_no = "";
+        String order_no = "O1011";
+        String seat_no = "3";
         OrderBusinessTier instance = new OrderBusinessTier();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.createOrder(order_no, seat_no);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -61,13 +61,13 @@ public class OrderBusinessTierTest {
     @Test
     public void testCreateOrderItem() throws Exception {
         System.out.println("createOrderItem");
-        String Item = "";
+        OrderJDBC jdbc=new OrderJDBC();
+        String Item = "O1012";
         OrderBusinessTier instance = new OrderBusinessTier();
-        String expResult = "";
+        String expResult = Item;
         String result = instance.createOrderItem(Item);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
