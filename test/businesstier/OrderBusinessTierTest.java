@@ -76,9 +76,10 @@ public class OrderBusinessTierTest {
     @Test
     public void testRetrieveOrder() throws Exception {
         System.out.println("retrieveOrder");
-        String order_no = "";
+        String order_no = "S1011";
+        OrderJDBC jdbc=new OrderJDBC();
         OrderBusinessTier instance = new OrderBusinessTier();
-        String expResult = "";
+        String expResult = jdbc.retrieveOrder(order_no);
         String result = instance.retrieveOrder(order_no);
         assertEquals(expResult, result);
         
@@ -162,7 +163,7 @@ public class OrderBusinessTierTest {
     public void testGetOrderNo() throws Exception {
         System.out.println("getOrderNo");
         OrderBusinessTier instance = new OrderBusinessTier();
-        String expResult = "O1012";
+        String expResult = "O1012";       
         String result = instance.getOrderNo();
         assertEquals(expResult, result);
         
@@ -174,14 +175,14 @@ public class OrderBusinessTierTest {
     @Test
     public void testCreateNewOrderItem() throws Exception {
         System.out.println("createNewOrderItem");
-        String order_no = "";
-        String Item = "";
+        String order_no = "O1012";
+        String Item = "Hainan Chicken Rice";
         OrderBusinessTier instance = new OrderBusinessTier();
-        String expResult = "";
+         OrderJDBC jdbc=new OrderJDBC();
+        String expResult = order_no;
         String result = instance.createNewOrderItem(order_no, Item);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -199,18 +200,7 @@ public class OrderBusinessTierTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of viewOrder method, of class OrderBusinessTier.
-     */
-    @Test
-    public void testViewOrder() throws Exception {
-        System.out.println("viewOrder");
-        DefaultTableModel model = null;
-        String order_no = "";
-        OrderBusinessTier instance = new OrderBusinessTier();
-        instance.viewOrder(model, order_no);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+  
+    
     
 }

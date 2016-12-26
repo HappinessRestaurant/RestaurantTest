@@ -81,7 +81,7 @@ public class PaymentBusinessTierTest {
         System.out.println("calculation");
         String order_no = "O1004";
         PaymentBusinessTier instance = new PaymentBusinessTier();
-        double expResult = 10;
+        double expResult = 0;
         double result = instance.calculation(order_no);
         assertEquals(expResult, result, 0.0);
         
