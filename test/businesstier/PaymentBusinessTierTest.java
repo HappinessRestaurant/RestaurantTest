@@ -67,7 +67,7 @@ public class PaymentBusinessTierTest {
     public void testGetPaymentId() throws Exception {
         System.out.println("getPaymentId");
         PaymentBusinessTier instance = new PaymentBusinessTier();
-        String expResult = "P1006";
+        String expResult = "P1004";
         String result = instance.getPaymentId();
         assertEquals(expResult, result);
       
@@ -79,9 +79,9 @@ public class PaymentBusinessTierTest {
     @Test
     public void testCalculation() throws Exception {
         System.out.println("calculation");
-        String order_no = "O1006";
+        String order_no = "O1004";
         PaymentBusinessTier instance = new PaymentBusinessTier();
-        double expResult = 2.5;
+        double expResult = 10;
         double result = instance.calculation(order_no);
         assertEquals(expResult, result, 0.0);
         

@@ -81,8 +81,7 @@ public class OrderBusinessTierTest {
         String expResult = "";
         String result = instance.retrieveOrder(order_no);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -135,13 +134,12 @@ public class OrderBusinessTierTest {
     @Test
     public void testDeleteOrder() throws Exception {
         System.out.println("deleteOrder");
-        String order_no = "";
+        String order_no = "O1011";
         OrderBusinessTier instance = new OrderBusinessTier();
-        boolean expResult = false;
+        boolean expResult = false    ;
         boolean result = instance.deleteOrder(order_no);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -151,11 +149,10 @@ public class OrderBusinessTierTest {
     public void testDeleteAllOrder() throws Exception {
         System.out.println("deleteAllOrder");
         OrderBusinessTier instance = new OrderBusinessTier();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.deleteAllOrder();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
