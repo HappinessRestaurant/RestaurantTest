@@ -15,10 +15,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author This PC
- */
 public class PersonnelBusinessTierTest {
     
     public PersonnelBusinessTierTest() {
@@ -40,9 +36,7 @@ public class PersonnelBusinessTierTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of createPersonnel method, of class PersonnelBusinessTier.
-     */
+    
     @Test
     public void testCreatePersonnel() throws Exception {
         System.out.println("createPersonnel");
