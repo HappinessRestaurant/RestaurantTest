@@ -41,7 +41,7 @@ public class PersonnelBusinessTierTest {
         Personnel p = new Personnel("S104","Ah Gao","950212","asd","Female","010-2314421","S");
         PersonnelBusinessTier instance = new PersonnelBusinessTier();
         
-        String expResult ="M107";
+        String expResult ="M113";
         String result = instance.createPersonnel(p);
         assertEquals(expResult, result);
   
@@ -75,20 +75,7 @@ public class PersonnelBusinessTierTest {
        
     }
 
-    /**
-     * Test of retrieveAPersonnel method, of class PersonnelBusinessTier.
-     */
-    @Test
-    public void testRetrieveAPersonnel() throws Exception {
-        System.out.println("retrieveAPersonnel");
-        String name = "";
-        PersonnelBusinessTier instance = new PersonnelBusinessTier();
-        String expResult = "";
-        String result = instance.retrieveAPersonnel(name);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+  
 
     /**
      * Test of retrieveId method, of class PersonnelBusinessTier.
@@ -96,13 +83,13 @@ public class PersonnelBusinessTierTest {
     @Test
     public void testRetrieveId() throws Exception {
         System.out.println("retrieveId");
-        String id = "";
+        String id = "M108";
         PersonnelBusinessTier instance = new PersonnelBusinessTier();
-        ArrayList expResult = null;
+        PersonnelJDBC jdbc= new PersonnelJDBC();
+        ArrayList expResult = jdbc.retrieveId(id);
         ArrayList result = instance.retrieveId(id);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -126,13 +113,13 @@ public class PersonnelBusinessTierTest {
     @Test
     public void testGetStaffId() throws Exception {
         System.out.println("getStaffId");
-        String type = "";
+        String type = "M";
         PersonnelBusinessTier instance = new PersonnelBusinessTier();
-        ArrayList expResult = null;
+        PersonnelJDBC jdbc= new PersonnelJDBC();
+        ArrayList expResult = jdbc.getStaffId(type);
         ArrayList result = instance.getStaffId(type);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
