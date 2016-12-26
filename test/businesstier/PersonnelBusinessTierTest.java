@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Admin
+ * @author This PC
  */
 public class PersonnelBusinessTierTest {
     
@@ -46,12 +46,13 @@ public class PersonnelBusinessTierTest {
     @Test
     public void testCreatePersonnel() throws Exception {
         System.out.println("createPersonnel");
-        Personnel p = new Personnel("S1005","Try","asd","bbb","Male","123","S");
+        Personnel p = null;
         PersonnelBusinessTier instance = new PersonnelBusinessTier();
-        String expResult = "\"S1005\",\"Try\",\"asd\",\"bbb\",\"Male\",\"123\",\"S\"";
+        String expResult = "";
         String result = instance.createPersonnel(p);
         assertEquals(expResult, result);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -64,7 +65,8 @@ public class PersonnelBusinessTierTest {
         ArrayList expResult = null;
         ArrayList result = instance.retrieveName();
         assertEquals(expResult, result);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -160,12 +162,13 @@ public class PersonnelBusinessTierTest {
     @Test
     public void testDeletePersonnel() throws Exception {
         System.out.println("deletePersonnel");
-        String name = "Test";
+        String name = "";
         PersonnelBusinessTier instance = new PersonnelBusinessTier();
-        boolean expResult = true;
+        boolean expResult = false;
         boolean result = instance.deletePersonnel(name);
         assertEquals(expResult, result);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }
