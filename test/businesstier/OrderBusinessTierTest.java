@@ -92,11 +92,11 @@ public class OrderBusinessTierTest {
     public void testGetFoodName() throws Exception {
         System.out.println("getFoodName");
         OrderBusinessTier instance = new OrderBusinessTier();
-        ArrayList expResult = null;
+        OrderJDBC jdbc=new OrderJDBC();
+        ArrayList expResult = jdbc.getFoodName();
         ArrayList result = instance.getFoodName();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -106,11 +106,11 @@ public class OrderBusinessTierTest {
     public void testRetrieveOrderNo() throws Exception {
         System.out.println("retrieveOrderNo");
         OrderBusinessTier instance = new OrderBusinessTier();
-        ArrayList expResult = null;
+        OrderJDBC jdbc=new OrderJDBC();
+        ArrayList expResult = jdbc.retrieveOrderNo();
         ArrayList result = instance.retrieveOrderNo();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -119,14 +119,14 @@ public class OrderBusinessTierTest {
     @Test
     public void testUpdateOrder() throws Exception {
         System.out.println("updateOrder");
-        String order_no = "";
-        String seat_no = "";
+        OrderJDBC jdbc=new OrderJDBC();
+        String order_no = "S1011";
+        String seat_no = "3";
         OrderBusinessTier instance = new OrderBusinessTier();
         boolean expResult = false;
         boolean result = instance.updateOrder(order_no, seat_no);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
     }
 
     /**
@@ -191,13 +191,12 @@ public class OrderBusinessTierTest {
     @Test
     public void testResetOrderList() throws Exception {
         System.out.println("resetOrderList");
-        String order_no = "";
+        String order_no = "S1012";
         OrderBusinessTier instance = new OrderBusinessTier();
         boolean expResult = false;
         boolean result = instance.resetOrderList(order_no);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
     }
 
   
