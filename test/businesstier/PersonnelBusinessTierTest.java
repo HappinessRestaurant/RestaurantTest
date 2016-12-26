@@ -41,7 +41,7 @@ public class PersonnelBusinessTierTest {
         Personnel p = new Personnel("S104","Ah Gao","950212","asd","Female","010-2314421","S");
         PersonnelBusinessTier instance = new PersonnelBusinessTier();
         
-        String expResult ="M113";
+        String expResult ="M104";
         String result = instance.createPersonnel(p);
         assertEquals(expResult, result);
   
@@ -98,13 +98,11 @@ public class PersonnelBusinessTierTest {
     @Test
     public void testUpdatePersonnel() throws Exception {
         System.out.println("updatePersonnel");
-        Personnel p = null;
+        Personnel p = new Personnel("S104","Ah Gao","950212","asd","Female","010-2314421","S");;
         PersonnelBusinessTier instance = new PersonnelBusinessTier();
         boolean expResult = false;
         boolean result = instance.updatePersonnel(p);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -122,18 +120,6 @@ public class PersonnelBusinessTierTest {
        
     }
 
-    /**
-     * Test of viewPersonnel method, of class PersonnelBusinessTier.
-     */
-    @Test
-    public void testViewPersonnel() throws Exception {
-        System.out.println("viewPersonnel");
-        DefaultTableModel model = null;
-        PersonnelBusinessTier instance = new PersonnelBusinessTier();
-        instance.viewPersonnel(model);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
     /**
      * Test of deletePersonnel method, of class PersonnelBusinessTier.
@@ -141,13 +127,12 @@ public class PersonnelBusinessTierTest {
     @Test
     public void testDeletePersonnel() throws Exception {
         System.out.println("deletePersonnel");
-        String name = "";
+        String name = "Ah Gao";
         PersonnelBusinessTier instance = new PersonnelBusinessTier();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.deletePersonnel(name);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     
     }
     
 }
