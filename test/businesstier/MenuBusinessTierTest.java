@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package businesstier;
 
 import domain.Menu;
@@ -41,9 +37,7 @@ public class MenuBusinessTierTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of createMenu method, of class MenuBusinessTier.
-     */
+  
     @Test
     public void testCreateMenu() throws Exception {
         System.out.println("createMenu");
@@ -55,9 +49,6 @@ public class MenuBusinessTierTest {
         
     }
 
-    /**
-     * Test of retrieveFood method, of class MenuBusinessTier.
-     */
     @Test
     public void testRetrieveFood() throws Exception {
         System.out.println("retrieveFood");
@@ -69,9 +60,7 @@ public class MenuBusinessTierTest {
         
     }
 
-    /**
-     * Test of retrieveAllFoodId method, of class MenuBusinessTier.
-     */
+
     @Test
     public void testRetrieveAllFoodId() throws Exception {
         System.out.println("retrieveAllFoodId");
@@ -83,9 +72,6 @@ public class MenuBusinessTierTest {
         
     }
 
-    /**
-     * Test of retrieveAllMenu method, of class MenuBusinessTier.
-     */
     @Test
     public void testRetrieveAllMenu() throws Exception {
         System.out.println("retrieveAllMenu");
@@ -97,9 +83,7 @@ public class MenuBusinessTierTest {
        
     }
 
-    /**
-     * Test of retrieveAMenu method, of class MenuBusinessTier.
-     */
+
     @Test
     public void testRetrieveAMenu() throws Exception {
         System.out.println("retrieveAMenu");
@@ -112,9 +96,6 @@ public class MenuBusinessTierTest {
         
     }
 
-    /**
-     * Test of retrieveId method, of class MenuBusinessTier.
-     */
     @Test
     public void testRetrieveId() throws Exception {
         System.out.println("retrieveId");
@@ -127,9 +108,6 @@ public class MenuBusinessTierTest {
         
     }
 
-    /**
-     * Test of updateMenu method, of class MenuBusinessTier.
-     */
     @Test
     public void testUpdateMenu() throws Exception {
         System.out.println("updateMenu");
@@ -141,9 +119,7 @@ public class MenuBusinessTierTest {
         
     }
 
-    /**
-     * Test of deleteMenu method, of class MenuBusinessTier.
-     */
+    
     @Test
     public void testDeleteMenu() throws Exception {
         System.out.println("deleteMenu");
@@ -155,9 +131,7 @@ public class MenuBusinessTierTest {
         
     }
 
-    /**
-     * Test of viewMenu method, of class MenuBusinessTier.
-     */
+  
     @Test
     public void testViewMenu() throws Exception {
         System.out.println("viewMenu");
