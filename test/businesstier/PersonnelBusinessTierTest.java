@@ -38,9 +38,10 @@ public class PersonnelBusinessTierTest {
     @Test
     public void testCreatePersonnel() throws Exception {
         System.out.println("createPersonnel");
-        Personnel p = null;
+        Personnel p = new Personnel("S104","Ah Gao","950212","asd","Female","010-2314421","S");
         PersonnelBusinessTier instance = new PersonnelBusinessTier();
-        String expResult = "";
+        
+        String expResult ="M107";
         String result = instance.createPersonnel(p);
         assertEquals(expResult, result);
   
@@ -53,11 +54,11 @@ public class PersonnelBusinessTierTest {
     public void testRetrieveName() throws Exception {
         System.out.println("retrieveName");
         PersonnelBusinessTier instance = new PersonnelBusinessTier();
-        ArrayList expResult = null;
+        PersonnelJDBC jdbc= new PersonnelJDBC();
+        ArrayList expResult = jdbc.retrieveName();
         ArrayList result = instance.retrieveName();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    
     }
 
     /**
@@ -67,11 +68,11 @@ public class PersonnelBusinessTierTest {
     public void testRetrieveAllId() throws Exception {
         System.out.println("retrieveAllId");
         PersonnelBusinessTier instance = new PersonnelBusinessTier();
-        ArrayList expResult = null;
+        PersonnelJDBC jdbc= new PersonnelJDBC();
+        ArrayList expResult = jdbc.retrieveAllId();
         ArrayList result = instance.retrieveAllId();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
