@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package businesstier;
 
 import domain.Personnel;
@@ -14,6 +10,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import jdbc.PersonnelJDBC;
+
 
 public class PersonnelBusinessTierTest {
     
@@ -45,8 +43,7 @@ public class PersonnelBusinessTierTest {
         String expResult = "";
         String result = instance.createPersonnel(p);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+  
     }
 
     /**
