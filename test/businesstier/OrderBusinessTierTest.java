@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package businesstier;
 
 import java.util.ArrayList;
@@ -40,9 +36,7 @@ public class OrderBusinessTierTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of createOrder method, of class OrderBusinessTier.
-     */
+ 
     @Test
     public void testCreateOrder() throws Exception {
         System.out.println("createOrder");
@@ -55,13 +49,10 @@ public class OrderBusinessTierTest {
         
     }
 
-    /**
-     * Test of createOrderItem method, of class OrderBusinessTier.
-     */
     @Test
     public void testCreateOrderItem() throws Exception {
         System.out.println("createOrderItem");
-        OrderJDBC jdbc=new OrderJDBC();
+        
         String Item = "O1012";
         OrderBusinessTier instance = new OrderBusinessTier();
         String expResult = Item;
@@ -70,9 +61,7 @@ public class OrderBusinessTierTest {
         
     }
 
-    /**
-     * Test of retrieveOrder method, of class OrderBusinessTier.
-     */
+    
     @Test
     public void testRetrieveOrder() throws Exception {
         System.out.println("retrieveOrder");
@@ -129,9 +118,6 @@ public class OrderBusinessTierTest {
       
     }
 
-    /**
-     * Test of deleteOrder method, of class OrderBusinessTier.
-     */
     @Test
     public void testDeleteOrder() throws Exception {
         System.out.println("deleteOrder");
@@ -143,9 +129,7 @@ public class OrderBusinessTierTest {
         
     }
 
-    /**
-     * Test of deleteAllOrder method, of class OrderBusinessTier.
-     */
+ 
     @Test
     public void testDeleteAllOrder() throws Exception {
         System.out.println("deleteAllOrder");
@@ -156,9 +140,6 @@ public class OrderBusinessTierTest {
         
     }
 
-    /**
-     * Test of getOrderNo method, of class OrderBusinessTier.
-     */
     @Test
     public void testGetOrderNo() throws Exception {
         System.out.println("getOrderNo");
@@ -169,16 +150,13 @@ public class OrderBusinessTierTest {
         
     }
 
-    /**
-     * Test of createNewOrderItem method, of class OrderBusinessTier.
-     */
+
     @Test
     public void testCreateNewOrderItem() throws Exception {
         System.out.println("createNewOrderItem");
         String order_no = "O1012";
         String Item = "Hainan Chicken Rice";
         OrderBusinessTier instance = new OrderBusinessTier();
-         OrderJDBC jdbc=new OrderJDBC();
         String expResult = order_no;
         String result = instance.createNewOrderItem(order_no, Item);
         assertEquals(expResult, result);
@@ -199,7 +177,4 @@ public class OrderBusinessTierTest {
       
     }
 
-  
-    
-    
 }
